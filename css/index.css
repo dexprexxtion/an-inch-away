@@ -5,6 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .header_home_page {
@@ -30,8 +31,8 @@ body {
     background-color: #fff;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
     border-radius: 20px;
+    transition: color 0.3s, background-color 0.3s;
 }
 
 .header_home_page_start_b1:hover {
