@@ -58,3 +58,19 @@ body {
     margin-bottom: 0;
     text-align: center;
 }
+
+.restart_p2_b1 {
+    font-family: 'Playfair Display', serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    padding: 10px 20px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
