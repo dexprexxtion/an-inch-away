@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
         header_home_page_t1.style.opacity = '0';
         start_button.style.opacity = '0';
 
+        document.body.style.backgroundColor = '#fff';
+        document.body.style.color = '#000';
+
         // Wait for the transition to end (300ms is the expected duration)
         setTimeout(function() {
             // Remove original elements
@@ -53,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Fade in new elements
             header_p2_t1.style.opacity = '1';
             subheader_p2_st1.style.opacity = '1';
-            
         }, 300);
     });
 });
