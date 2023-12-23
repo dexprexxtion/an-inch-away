@@ -64,30 +64,18 @@ document.addEventListener('DOMContentLoaded', function() {
             header_p2_t1.style.opacity = '1';
             subheader_p2_st1.style.opacity = '1';
             restart_button.style.opacity = '1';
+
+    // Handle click interaction for restart button
+    restart_button.addEventListener('click', function() {
+        window.location.href = '../index.html';
+        console.log("restart button clicked.")
+    });
+
+    // TODO: Make the restart button work, the function above doesn't work. 
         }, 300);
     });
 
-    // Handle hover interaction for restart button
-    restart_button.addEventListener('mouseenter', function() {
-        document.body.style.backgroundColor = '#000';
-        document.body.style.color = '#fff';
-        restart_button.style.backgroundColor = '#000';
-        restart_button.style.color = '#fff';
-    });
-
-    restart_button.addEventListener('mouseleave', function() {
-        document.body.style.backgroundColor = '#fff';
-        document.body.style.color = '#000';
-        restart_button.style.backgroundColor = '#fff';
-        document.body.style.color = '#000';
-    });
-
-    // Handle click interaction for restart button
-    restart_button.addEventListener('click', function(event) {
-        window.location.href = '../index.html';
-    });
-
-    // TODO: Make the restart button work, the function above doesn't work.
+    
 });
 
 
