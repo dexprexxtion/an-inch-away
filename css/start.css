@@ -41,3 +41,34 @@ body {
     font-size: 24px;
     padding: 5px;
 }
+
+.start_container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.start_container_title {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.go_button {
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.go_button:hover {
+    background-color: #333;
+    color: #fff;
+}
