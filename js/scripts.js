@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     start_button.addEventListener('mouseenter', function() {
         document.body.style.backgroundColor = '#000';
         document.body.style.color = '#fff';
-        start_button.style.backgroundColor = '#000';
+        start_button.style.backgroundColor = '#333';
         start_button.style.color = '#fff';
     });
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = '#000';
         start_button.style.backgroundColor = '#fff';
-        start_button.style.color = '#000';
+        start_button.style.color = '#333';
     });
 
     start_button.addEventListener('click', function() {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     });
 
-    
+
 
     // Handle hover and click interactions for next button
     button_next.addEventListener('mouseenter', function() {
