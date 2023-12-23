@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     });
 
+    
+
     // Handle hover and click interactions for next button
     button_next.addEventListener('mouseenter', function() {
         handleRestartAndNextButtonHover(button_next);
