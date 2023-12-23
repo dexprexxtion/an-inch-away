@@ -112,8 +112,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     button_next.addEventListener('click', function() {
-        // Add logic for the "Next" button click if needed
-        // For now, let's reload the page
-        window.location.reload();
+        window.location.href = '../start.html';
     });
 });
