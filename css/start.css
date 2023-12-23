@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.start_page_div {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.start_p1_i1 {
+    width: 150px;
+    margin-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.start_p1_image_tc1 {
+    text-align: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.start_p1_t1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    padding: 5px;
+}
+
+.start_p1_st1 {
+    margin: 0;
+    font-family: 'Sanchez', serif;
+    font-size: 24px;
+    padding: 5px;
+}
