@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var restart_button = document.querySelector('.restart_p2_b1');
     var button_next = document.querySelector('.button_next_b1');
 
-    // Function to handle hover and mouseleave style changes for both buttons restart and next
-    function handleRestartAndNextButtonHover() {
+    // Function to handle hover and mouseleave style changes for both buttons
+    function handleButtonHover(button) {
         document.body.style.backgroundColor = '#000';
         document.body.style.color = '#fff';
         restart_button.style.backgroundColor = '#000';
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button_next.style.color = '#fff';
     }
 
-    function handleRestartAndNextButtonMouseLeave() {
+    function handleButtonMouseLeave() {
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = '#000';
         restart_button.style.backgroundColor = '#fff';
@@ -53,32 +53,48 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show elements on the second page
             document.querySelector('.header-p2-t1').style.display = 'block';
-            document.querySelector('.subheader-p2-st1').style.display = 'block';
-            restart_button.style.display = 'block';
-            button_next.style.display = 'block';
-
+            
             // Trigger reflow to ensure CSS transitions are applied correctly
             document.querySelector('.header-p2-t1').offsetHeight;
-            document.querySelector('.subheader-p2-st1').offsetHeight;
-            restart_button.offsetHeight;
-            button_next.offsetHeight;
 
-            // Fade in new elements
+            // Fade in header_p2_t1
             document.querySelector('.header-p2-t1').style.opacity = '1';
-            document.querySelector('.subheader-p2-st1').style.opacity = '1';
-            restart_button.style.opacity = '1';
-            button_next.style.opacity = '1';
 
-        }, 1000);
+            // Wait for 1s and then show subheader_p2_st1
+            setTimeout(function() {
+                document.querySelector('.subheader-p2-st1').style.display = 'block';
+
+                // Trigger reflow
+                document.querySelector('.subheader-p2-st1').offsetHeight;
+
+                // Fade in subheader_p2_st1
+                document.querySelector('.subheader-p2-st1').style.opacity = '1';
+            }, 1000);
+
+            // Wait for 3s and then show restart_button and button_next
+            setTimeout(function() {
+                restart_button.style.display = 'block';
+                button_next.style.display = 'block';
+
+                // Trigger reflow
+                restart_button.offsetHeight;
+                button_next.offsetHeight;
+
+                // Fade in restart_button and button_next
+                restart_button.style.opacity = '1';
+                button_next.style.opacity = '1';
+            }, 3000);
+
+        }, 300);
     });
 
     // Handle hover and click interactions for restart button
     restart_button.addEventListener('mouseenter', function() {
-        handleRestartAndNextButtonHover();
+        handleButtonHover(restart_button);
     });
 
     restart_button.addEventListener('mouseleave', function() {
-        handleRestartAndNextButtonMouseLeave();
+        handleButtonMouseLeave();
     });
 
     restart_button.addEventListener('click', function() {
@@ -86,15 +102,13 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     });
 
-
-
     // Handle hover and click interactions for next button
     button_next.addEventListener('mouseenter', function() {
-        handleRestartAndNextButtonHover(button_next);
+        handleButtonHover(button_next);
     });
 
     button_next.addEventListener('mouseleave', function() {
-        handleRestartAndNextButtonMouseLeave();
+        handleButtonMouseLeave();
     });
 
     button_next.addEventListener('click', function() {
